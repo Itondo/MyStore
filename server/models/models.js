@@ -1,23 +1,23 @@
-const requelize = require('../db')
+const sequelize = require('../db')
 const {DataTypes} = require ('sequelize')
 
 
-const User = requelize.define('user',{
+const User = sequelize.define('user',{
     id: {type:DataTypes.INTEGER,primaryKey:true, autoIncrement: true},
     email:{type:DataTypes.STRING,unique: true,},
     password:{type:DataTypes.STRING},
     role:{type:DataTypes.STRING,unique: true,defaultValue: "USER"},
 
 })
-const Basket = requelize.define('basket', {
+const Basket = sequelize.define('basket', {
     id: {type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true},
 
 })
-const BasketDevice = requelize.define('basket_device', {
+const BasketDevice = sequelize.define('basket_device', {
     id: {type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true},
 
 })
-const Device = requelize.define('device', {
+const Device = sequelize.define('device', {
     id: {type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true},
     name:{type:DataTypes.STRING,unique:true,allowNull:false},
     price:{type:DataTypes.INTEGER,allowNull:false},
@@ -25,25 +25,25 @@ const Device = requelize.define('device', {
     img:{type:DataTypes.STRING,defaultValue:0},
 
 })
-const Type = requelize.define('type', {
+const Type = sequelize.define('type', {
     id: {type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true},
     Name: {type: DataTypes.STRING, unique:true,allowNull:false},
 })
-const Brand = requelize.define('brand', {
+const Brand = sequelize.define('brand', {
     id: {type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true},
     Name: {type: DataTypes.STRING, unique: true, allowNull: false},
 })
-const Rating = requelize.define('rating', {
+const Rating = sequelize.define('rating', {
     id: {type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true},
     rate: {type: DataTypes.INTEGER, allowNull: false},
 })
-const DeviceInfo = requelize.define('device_info', {
+const DeviceInfo = sequelize.define('device_info', {
     id: {type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true},
     title: {type: DataTypes.STRING,allowNull: false},
     description: {type:DataTypes.STRING,allowNull:false},
 })
 
-const TypeBrand = requelize.define('type_brand',{
+const TypeBrand = sequelize.define('type_brand',{
     id: {type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true},
 })
 
