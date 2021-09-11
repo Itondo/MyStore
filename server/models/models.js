@@ -77,7 +77,7 @@ Brand.belongsToMany(Type,{through:TypeBrand })
 
 module.exports =
 {
-    User,
+   /* User,
         Basket,
         BasketDevice,
         Device,
@@ -86,5 +86,5 @@ module.exports =
         Rating,
         TypeBrand,
         DeviceInfo
-}
+**/ }
 
