@@ -11,6 +11,8 @@ const app = express()
 // noinspection JSCheckFunctionSignatures
 app.use(cors())
 app.use(express.json())
+
+
 // noinspection JSCheckFunctionSignatures
 app.use('/api',router)
 
