@@ -5,8 +5,8 @@ class userController {
     async login(reg,res){
 
     }
-    async chek(reg,res){
-
+    async check(reg,res){
+     res.json({message:'asdaasdasd'})
     }
 }
 module.exports = new userController()
