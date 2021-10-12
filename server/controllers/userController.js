@@ -1,12 +1,13 @@
 class userController {
-    async registration(reg,res){
+    async registration(req,res){
 
     }
-    async login(reg,res){
+    async login(req,res){
 
     }
-    async check(reg,res){
-     res.json({message:'asdaasdasd'})
+    async check(req,res) {
+        const query = req.query
+        req.json(query)
     }
 }
 module.exports = new userController()
